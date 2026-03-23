@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>EduLearn LMS – Online Learning Management System</title>
+<!-- Bootstrap 5 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<!-- Custom Styles -->
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<nav id="nav" class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand nav-brand" href="#hero"><i class="bi bi-mortarboard-fill me-2"></i>EduLearn</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nc">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nc">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pt">Progress</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testi">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+        <button id="themeBtn">🌙</button>
+        <a href="#courses" class="nav-link cta-nav ms-1">Get Started</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container position-relative" style="z-index:2">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <div class="hero-label"><i class="bi bi-mortarboard-fill"></i> Online Learning Management System</div>
+        <h1 class="hero-h1">Learn Without Limits,<br>Grow <em>Without Borders</em></h1>
+        <p class="hero-sub">Access 500+ expert-curated courses in Python, Web Dev, Data Science and more. Study at your own pace with industry projects, live lessons, and real mentors.</p>
+        <div class="hero-search">
+          <i class="bi bi-search" style="color:rgba(255,255,255,.6);display:flex;align-items:center;padding-left:6px"></i>
+          <input type="text" id="heroSrch" placeholder="Search courses, topics, skills…"/>
+          <button class="btn-hero" onclick="heroSearch()">Search</button>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hs-num">500+</div><div class="hs-lbl">Courses</div></div>
+          <div><div class="hs-num">12K+</div><div class="hs-lbl">Learners</div></div>
+          <div><div class="hs-num">98%</div><div class="hs-lbl">Satisfaction</div></div>
+          <div><div class="hs-num">48</div><div class="hs-lbl">Mentors</div></div>
+        </div>
+      </div>
+      <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
+        <div class="fc">
+          <div class="d-flex align-items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=80&q=80" style="width:46px;height:46px;border-radius:10px;object-fit:cover;flex-shrink:0"/>
+            <div><div style="font-weight:700">Python with Flask &amp; Django</div><div style="font-size:.8rem;opacity:.75">Advanced · 12 weeks · 48 lessons</div></div>
+          </div>
+          <div style="margin-top:12px;font-size:.75rem;opacity:.7;margin-bottom:5px">Your progress: 68%</div>
+          <div class="prog-mini"><div class="prog-mini-bar" style="width:68%"></div></div>
+        </div>
+        <div class="fc">
+          <div class="d-flex align-items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=80&q=80" style="width:46px;height:46px;border-radius:10px;object-fit:cover;flex-shrink:0"/>
+            <div><div style="font-weight:700">Full-Stack Web Development</div><div style="font-size:.8rem;opacity:.75">Intermediate · 10 weeks</div></div>
+          </div>
+          <div style="margin-top:8px">
+            <span class="fc-tag">HTML5</span><span class="fc-tag">Bootstrap 5</span><span class="fc-tag">JS</span><span class="fc-tag">MongoDB</span>
+          </div>
+        </div>
+        <div class="fc" style="text-align:center">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&q=80" style="width:46px;height:46px;border-radius:10px;object-fit:cover;margin:0 auto 8px"/>
+          <div style="font-weight:700;font-size:1rem">Data Science &amp; ML</div>
+          <div style="font-size:.8rem;opacity:.7;margin-top:4px">★★★★★ 4.9/5 · 3,200+ reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COURSES ══════════════════════════════════════════════ -->
+<section id="courses">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sec-badge">📚 Curriculum</span>
+      <h2 class="sec-title">Explore Our Courses</h2>
+      <p class="sec-sub">Professionally designed courses to take you from beginner to industry-ready.</p>
+    </div>
+    <div class="s-wrap">
+      <input type="text" id="cSrch" placeholder="Search courses, tags…" oninput="filter()"/>
+      <i class="bi bi-search"></i>
+    </div>
+    <div class="cat-wrap">
+      <button class="cp on" onclick="catF('all',this)">All</button>
+      <button class="cp" onclick="catF('python',this)">🐍 Python</button>
+      <button class="cp" onclick="catF('web',this)">🌐 Web Dev</button>
+      <button class="cp" onclick="catF('data',this)">📊 Data Science</button>
+      <button class="cp" onclick="catF('mobile',this)">📱 Mobile</button>
+      <button class="cp" onclick="catF('security',this)">🔐 Security</button>
+    </div>
+    <div class="row g-4" id="cgrid"></div>
+    <div class="no-res" id="nores"><i class="bi bi-search d-block mb-3" style="font-size:2.5rem;opacity:.3"></i>No courses match your search.</div>
+  </div>
+</section>
+
+<!-- ══ PROGRESS TRACKER ═════════════════════════════════════ -->
+<section id="pt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sec-badge">📈 Your Journey</span>
+      <h2 class="sec-title">Progress Tracker</h2>
+      <p class="sec-sub">Track your milestones, study streaks, and stay motivated with real-time insights.</p>
+    </div>
+    <div class="row g-4" id="ptgrid"></div>
+    <div class="row g-4 mt-1">
+      <div class="col-md-4"><div class="ptcard text-center">
+        <div class="ptcard-icon">🏅</div><div class="ptcard-title">Achievements</div><div class="ptcard-sub">Badges earned this month</div>
+        <div class="mt-2"><span style="font-size:1.8rem;margin:0 4px">🎓</span><span style="font-size:1.8rem;margin:0 4px">🔥</span><span style="font-size:1.8rem;margin:0 4px">🧠</span><span style="font-size:1.8rem;margin:0 4px;opacity:.2">🏆</span></div>
+      </div></div>
+      <div class="col-md-4"><div class="ptcard text-center">
+        <div class="ptcard-icon">📅</div><div class="ptcard-title">Study Streak</div><div class="ptcard-sub">Consecutive days learning</div>
+        <div class="big-stat mt-2" style="color:var(--ac)">7</div><div style="color:var(--txm);font-size:.82rem;margin-top:4px">Days in a row 🔥</div>
+      </div></div>
+      <div class="col-md-4"><div class="ptcard text-center">
+        <div class="ptcard-icon">⏱️</div><div class="ptcard-title">Hours Learned</div><div class="ptcard-sub">Total study time this week</div>
+        <div class="big-stat mt-2" style="color:var(--ac2)">24h</div><div style="color:var(--txm);font-size:.82rem;margin-top:4px">+3h from last week</div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5">
+        <div class="about-img">
+          <img class="ai" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="Students learning together"/>
+          <div class="about-overlay"></div>
+          <div class="float-badge" style="top:20px;right:-18px"><div class="fbn">12,000+</div><div class="fbl">Students Enrolled</div></div>
+          <div class="float-badge" style="bottom:28px;left:-18px"><div class="fbn" style="color:var(--ac2)">48</div><div class="fbl">Expert Mentors</div></div>
+        </div>
+      </div>
+      <div class="col-lg-6 offset-lg-1">
+        <span class="sec-badge">🏛️ About Us</span>
+        <h2 class="sec-title text-start">Empowering the Next Generation of Tech Professionals</h2>
+        <p style="color:var(--txm);margin-bottom:26px;line-height:1.8;font-size:.95rem">EduLearn LMS is based on the training philosophy of <strong>Excellence Technology, Mohali</strong> — dedicated to imparting hard-core practical quality training about the latest technologies trending today.</p>
+        <div class="af"><div class="af-icon">🎯</div><div><div class="af-title">Our Mission</div><div class="af-body">To protect client's information systems by detecting threats, deterring attacks, and providing the best solutions in ever-changing security and technology challenges.</div></div></div>
+        <div class="af"><div class="af-icon">🏆</div><div><div class="af-title">Industry Recognition</div><div class="af-body">Global Award Winners for AGILE and OPEN GRAPH implementation, with over a decade in IT training, software development, and information security services.</div></div></div>
+        <div class="af"><div class="af-icon">🤝</div><div><div class="af-title">Our Philosophy</div><div class="af-body">Support good business practices through continual training and education, equipping local teams with international best practices for practical advisory services.</div></div></div>
+        <div class="af"><div class="af-icon">💡</div><div><div class="af-title">Expert Team</div><div class="af-body">Professionals in Python, GitHub, Mobile Apps, Network Security, and Web Development with 50+ years combined experience across multinational companies.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══════════════════════════════════════════ -->
+<section id="testi">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sec-badge">💬 Student Reviews</span>
+      <h2 class="sec-title">What Learners Say</h2>
+      <p class="sec-sub">Hear from students who transformed their careers through our platform.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="tc">
+        <div class="tc-quote">"</div><div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"The Python with Flask &amp; Django course completely changed my career. The practical projects gave me confidence to land my first developer job within 3 months!"</p>
+        <div class="tc-author"><div class="tc-av" style="background:linear-gradient(135deg,#1a56db,#3b82f6)">RS</div><div><div class="tc-name">Rahul Sharma</div><div class="tc-role">Python Developer · Chandigarh</div></div></div>
+      </div></div>
+      <div class="col-md-4"><div class="tc">
+        <div class="tc-quote">"</div><div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"EduLearn's LMS is intuitive and the progress tracker kept me motivated. The study notes feature is brilliant — I capture key ideas and review them later seamlessly."</p>
+        <div class="tc-author"><div class="tc-av" style="background:linear-gradient(135deg,#10b981,#059669)">PK</div><div><div class="tc-name">Priya Kaur</div><div class="tc-role">MCA Student · Punjabi University</div></div></div>
+      </div></div>
+      <div class="col-md-4"><div class="tc">
+        <div class="tc-quote">"</div><div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"The cybersecurity courses are top-notch with real industry content. Dark mode is a lifesaver for late-night study sessions. Best LMS platform I've used!"</p>
+        <div class="tc-author"><div class="tc-av" style="background:linear-gradient(135deg,#f59e0b,#d97706)">AM</div><div><div class="tc-name">Arjun Mehra</div><div class="tc-role">Security Analyst · New Delhi</div></div></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ═══════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="sec-badge">📬 Get in Touch</span>
+      <h2 class="sec-title">Contact Us</h2>
+      <p class="sec-sub">Have questions? We'd love to help you start your learning journey.</p>
+    </div>
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5">
+        <div class="ci"><div class="ci-icon"><i class="bi bi-building"></i></div><div><div class="ci-lbl">Corporate Office</div><div class="ci-val">C-133, First Floor, Industrial Area, Phase-8, Sector-72, Mohali</div></div></div>
+        <div class="ci"><div class="ci-icon"><i class="bi bi-telephone"></i></div><div><div class="ci-lbl">Phone</div><div class="ci-val">0172-4698755 · 93177-88822 · 93562-55522</div></div></div>
+        <div class="ci"><div class="ci-icon"><i class="bi bi-envelope"></i></div><div><div class="ci-lbl">Email</div><div class="ci-val">excellencehead@gmail.com</div></div></div>
+        <div class="ci"><div class="ci-icon"><i class="bi bi-globe"></i></div><div><div class="ci-lbl">Website</div><div class="ci-val" style="color:var(--pr)">www.excellencetechnology.in</div></div></div>
+      </div>
+      <div class="col-lg-7">
+        <div class="ccard">
+          <h4 style="font-family:'Inter',sans-serif;font-weight:700;margin-bottom:22px">Send us a Message</h4>
+          <form id="cf" onsubmit="submitForm(event)" novalidate>
+            <div class="row g-0">
+              <div class="col-md-6 pe-md-2"><input class="fi" id="fn" type="text" placeholder="Full Name"/><div class="emsg" id="efn"></div></div>
+              <div class="col-md-6 ps-md-2"><input class="fi" id="fe" type="email" placeholder="Email Address"/><div class="emsg" id="efe"></div></div>
+            </div>
+            <input class="fi" id="fs" type="text" placeholder="Subject"/>
+            <div class="emsg" id="efs"></div>
+            <select class="fi" id="fc2" style="cursor:pointer">
+              <option value="">Select a course you're interested in</option>
+              <option>Python with Flask &amp; Django</option>
+              <option>Full-Stack Web Development</option>
+              <option>Data Science &amp; Machine Learning</option>
+              <option>Cybersecurity Fundamentals</option>
+              <option>Mobile App Development</option>
+              <option>Other / General Inquiry</option>
+            </select>
+            <textarea class="fi" id="fm" rows="4" placeholder="Your message…" style="resize:vertical"></textarea>
+            <div class="emsg" id="efm"></div>
+            <button type="submit" class="btn-sub"><i class="bi bi-send me-2"></i>Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="fb"><i class="bi bi-mortarboard-fill me-2"></i>EduLearn</div>
+        <p class="ft">Empowering learners with practical, industry-ready skills. Excellence Technology, Mohali, Punjab.</p>
+        <div class="nl-wrap mt-3">
+          <input class="nl-in" type="email" placeholder="Email for updates…"/>
+          <button class="btn-nl" onclick="showToast('Subscribed! 🎉')">Subscribe</button>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="fh">Courses</div>
+        <a class="fl" href="#courses">Python &amp; Django</a><a class="fl" href="#courses">Web Development</a>
+        <a class="fl" href="#courses">Data Science</a><a class="fl" href="#courses">Cybersecurity</a><a class="fl" href="#courses">Mobile Dev</a>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="fh">Platform</div>
+        <a class="fl" href="#about">About Us</a><a class="fl" href="#testi">Reviews</a>
+        <a class="fl" href="#pt">My Progress</a><a class="fl" href="#contact">Support</a><a class="fl" href="#">Blog</a>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div class="fh">Company</div>
+        <a class="fl" href="#">Privacy Policy</a><a class="fl" href="#">Terms of Use</a>
+        <a class="fl" href="#">Careers</a><a class="fl" href="#">Partners</a><a class="fl" href="#">Sitemap</a>
+      </div>
+      <div class="col-lg-2">
+        <div class="fh">Connect</div>
+        <a class="fl" href="#"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+        <a class="fl" href="#"><i class="bi bi-github me-2"></i>GitHub</a>
+        <a class="fl" href="#"><i class="bi bi-youtube me-2"></i>YouTube</a>
+        <a class="fl" href="#"><i class="bi bi-twitter-x me-2"></i>Twitter</a>
+        <a class="fl" href="#"><i class="bi bi-instagram me-2"></i>Instagram</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <div style="font-size:.82rem;color:rgba(255,255,255,.45)">© 2025 EduLearn LMS · Excellence Technology, Mohali. All rights reserved.</div>
+      <div class="socials"><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-youtube"></i></a><a href="#"><i class="bi bi-instagram"></i></a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ VIDEO MODAL ═══════════════════════════════════════════ -->
+<div class="modal fade" id="vmModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="vmTitle" style="font-family:'Inter',sans-serif;font-weight:700">Lesson Player</h5>
+        <button class="mclose" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="vid-box">
+          <iframe id="ytFrame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+        </div>
+        <div id="vidLbl" style="font-size:.88rem;color:var(--txm);margin-bottom:12px;text-align:center">
+          <i class="bi bi-youtube me-1" style="color:#ff0000"></i> Select a chapter below to play
+        </div>
+        <div style="margin-top:14px">
+          <div style="font-weight:700;margin-bottom:10px;font-size:.9rem;color:var(--tx)">Lesson Chapters</div>
+          <div id="chapters"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ NOTES MODAL ═══════════════════════════════════════════ -->
+<div class="modal fade" id="nmModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="nmTitle" style="font-family:'Inter',sans-serif;font-weight:700">📝 Study Notes</h5>
+        <button class="mclose" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="mb-3"><span class="ntag" id="ncourse"></span><span class="ntag" style="background:var(--ac);color:#fff">Auto-saved</span></div>
+        <textarea class="notes-ta" id="nta" placeholder="Type your study notes here… They auto-save to local storage."></textarea>
+        <div style="font-size:.78rem;color:var(--txm);margin-top:7px"><i class="bi bi-cloud-check me-1"></i>Notes auto-save to local storage</div>
+      </div>
+      <div class="modal-footer">
+        <button onclick="clearNotes()" style="background:var(--surf2);border:none;padding:7px 16px;border-radius:9px;cursor:pointer;color:var(--tx);font-family:'Inter',sans-serif;font-size:.88rem">Clear</button>
+        <button onclick="saveNotes()" style="background:var(--pr);border:none;padding:7px 20px;border-radius:9px;cursor:pointer;color:#fff;font-weight:600;font-family:'Inter',sans-serif;font-size:.88rem">Save Notes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast-lms" id="toast">Done!</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom Script -->
+<script src="script.js"></script>
+
+</body>
+</html>
